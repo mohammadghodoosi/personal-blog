@@ -1,9 +1,14 @@
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+
      <h1>this is jsx template</h1>
+
+      <h1 className='title'>the title of template</h1>
+
     </div>
   );
 }
