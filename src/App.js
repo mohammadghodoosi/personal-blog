@@ -1,14 +1,17 @@
-
+import Navbar from './Navbar';
 import './App.css';
+import React from 'react';
+import Home from './Home';
 
 function App() {
   return (
     <div className="App">
-
-     <h1>this is jsx template</h1>
-
-      <h1 className='title'>the title of template</h1>
-
+        <div className='head'>
+            <Navbar />
+        </div>
+        <div className='content'>
+            <Home />
+        </div>
     </div>
   );
 }
