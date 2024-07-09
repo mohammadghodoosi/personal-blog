@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 
 function Home() {
-  const isInitialRender = useRef(true);
-  const [name, setName] = useState('abbas');
-  const [age, setAge] = useState(25);
+
   const [posts, setPosts] = useState(null);
   const [loading,setLoading]=useState(true);
   const [ermessage,setErmessage]=useState(null)
@@ -16,9 +14,6 @@ function Home() {
     setPosts(newBlogs);
   };
 
-  const changeAge = () => {
-    setAge(44);
-  };
 
   useEffect(() => {
     setTimeout(()=>{
@@ -32,7 +27,6 @@ function Home() {
 
   return (
     <div className="home">
-      <button onClick={changeAge}>Change age</button>
       {ermessage&&<div>{ermessage}</div>}
       {loading&&<h1>loading...</h1>}
       {posts&&<BlogList p={posts} handleDelete={handleDelete} />}
