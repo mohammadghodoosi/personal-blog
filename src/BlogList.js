@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 const BlogList = ({p, handleDelete}) => {
     return ( 
         <h3>
         {p.map(
-            (post)=>( <div>
+            (post)=>( <Link to={`Blogs/${post.id}`}>
                 <div>name:{post.title}</div>
                 <div>age:{post.author}</div>
                 <button onClick={()=>handleDelete(post.id)}>delete this</button>
                 <br></br>
-                </div>
+                </Link>
             )
         )}
     </h3>
